@@ -2,7 +2,7 @@ using System.Net;
 
 namespace HomeInventoryTests.Tests;
 
-[TestFixture]
+[TestFixture, Order(1)]
 public class ServiceAvailibilityTests
 {
     private HttpClient _httpClient;

@@ -1,7 +1,7 @@
 ﻿using HomeInventoryTests.Methods;
 namespace HomeInventoryTests.Tests
 {
-    [TestFixture, Order(1)]
+    [TestFixture, Order(2)]
     public class AuthTests
     {
         private ChromeDriver _driver;
