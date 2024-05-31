@@ -7,7 +7,7 @@ public static class ItemMethods
     public static void CreateItem(this ChromeDriver driver, string location, string itemName)
     {
         driver.Navigate().GoToUrl(TestSettings.WebsiteUrl);
-        Thread.Sleep(500);
+        Thread.Sleep(2000);
         var createItemButton =
             driver.FindElement(By.XPath("/html/body/div/div/div[6]/div[2]/div/div/div[2]/div/div/label"));
         createItemButton.Click();

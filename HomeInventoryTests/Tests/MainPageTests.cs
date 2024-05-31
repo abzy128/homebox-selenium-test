@@ -31,6 +31,7 @@ public class MainPageTests
     public void TotalItemsTest()
     {
         driver.Navigate().GoToUrl(testSettings.WebsiteUrl + "home");
+        Thread.Sleep(2000);
         var totalItemsElement =
             driver.FindElement(
                 By.XPath("/html/body/div/div/div[6]/div[1]/div[2]/div/section[1]/div/div[2]/div/div[2]"));

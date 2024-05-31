@@ -30,7 +30,7 @@ public class ProfileTests
     public void ProfilePageTest()
     {
         driver.Navigate().GoToUrl(testSettings.WebsiteUrl + "profile");
-        Thread.Sleep(500);
+        Thread.Sleep(2000);
         var currencySelector =
             driver.FindElement(
                 By.XPath("/html/body/div[1]/div/div[6]/div[1]/div[2]/div[3]/div[3]/div[2]/div/div[1]/select"));
