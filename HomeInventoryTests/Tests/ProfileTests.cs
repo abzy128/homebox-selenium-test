@@ -4,8 +4,10 @@ namespace HomeInventoryTests.Tests;
 
 [TestFixture]
 [Order(5)]
-public class ProfileTests(ChromeDriver driver, TestSettings testSettings)
+public class ProfileTests
 {
+    private ChromeDriver driver;
+    private TestSettings testSettings;
     [OneTimeSetUp]
     public void Setup()
     {

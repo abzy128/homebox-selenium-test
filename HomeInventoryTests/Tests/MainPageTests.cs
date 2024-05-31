@@ -4,8 +4,11 @@ namespace HomeInventoryTests.Tests;
 
 [TestFixture]
 [Order(4)]
-public class MainPageTests(ChromeDriver driver, TestSettings testSettings)
+public class MainPageTests
 {
+    private ChromeDriver driver;
+    private TestSettings testSettings;
+
     [OneTimeSetUp]
     public void Setup()
     {

@@ -4,12 +4,13 @@ namespace HomeInventoryTests.Tests;
 
 [TestFixture]
 [Order(3)]
-public class ItemTests(ChromeDriver driver, TestSettings testSettings)
+public class ItemTests
 {
+    private ChromeDriver driver;
+
     [OneTimeSetUp]
     public void Setup()
     {
-        testSettings = TestSettingLoader.Load();
         driver = new ChromeDriver();
         driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(300);
         driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);

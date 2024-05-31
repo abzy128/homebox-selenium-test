@@ -4,8 +4,12 @@ namespace HomeInventoryTests.Tests;
 
 [TestFixture]
 [Order(1)]
-public class ServiceAvailabilityTests(HttpClient httpClient, TestSettings testSettings)
+public class ServiceAvailabilityTests
 {
+
+    private HttpClient httpClient;
+    private TestSettings testSettings;
+
     [OneTimeSetUp]
     public void Setup()
     {

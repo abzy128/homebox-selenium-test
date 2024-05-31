@@ -4,8 +4,11 @@ namespace HomeInventoryTests.Tests;
 
 [TestFixture]
 [Order(2)]
-public class AuthTests(ChromeDriver driver, TestSettings testSettings)
+public class AuthTests
 {
+    private ChromeDriver driver;
+    private TestSettings testSettings;
+
     [OneTimeSetUp]
     public void Setup()
     {
@@ -39,8 +42,7 @@ public class AuthTests(ChromeDriver driver, TestSettings testSettings)
     public void TestLogin(string email, string password)
     {
         driver.LoginToWebsite(email, password);
-        var expectedUrl = testSettings.WebsiteUrl + "home";
-        if (expectedUrl == null) throw new ArgumentException($"{email} + {password} were incorrect");
+        var expectedUrl = testSettings.WebsiteUrl + "home" ?? throw new ArgumentException($"{email} + {password} were incorrect");
         var actualUrl = driver.Url;
         Assert.That(expectedUrl, Is.EqualTo(actualUrl));
     }
