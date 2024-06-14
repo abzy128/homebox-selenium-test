@@ -26,7 +26,7 @@ public class ItemTests
 
     [Test]
     [Order(1)]
-    [TestCase("Office", "randomItem")]
+    [TestCase("Kitchen", "randomItem")]
     [TestCase("Offi", "randomItem2")]
     public void CreateItemTest(string location, string itemName)
     {
